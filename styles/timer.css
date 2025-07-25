@@ -1,0 +1,179 @@
+body {
+  font-family: Roboto, Arial;
+  background-color: black;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: white;
+  margin-top: 180px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.started {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clock-container {
+  font-family: monospace;
+  font-size: 3em;
+  border: 3px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  background-color: hsl(255, 78%, 56%);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons-container button {
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: hsl(255, 78%, 46%);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.preset-values{
+  display: flex;
+  gap: 25px;
+  font-size: 1.2em;
+  color: hsl(255, 78%, 56%);
+  font-weight: 600;
+}
+
+.preset-value{
+  height: 40px;
+  width: 40px;
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.preset-value:hover{
+  background-color: hsl(0, 0%, 10%);
+}
+
+.name{
+  margin-bottom: 20px;
+}
+
+.seconds-container,
+.minutes-container,
+.hours-container {
+  height: 120px;
+  width: 50px;
+  overflow: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.seconds-list,
+.minutes-list,
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(255, 78%, 56%);
+}
+
+.seconds-list div,
+.minutes-list div,
+.hours-list div {
+  height: 40px;
+  scroll-snap-align: center;
+}
+
+.selected-hours,
+.selected-minutes,
+.selected-seconds {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.time-up{
+  font-family: Roboto, Arial;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.time-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  
+}
+
+circle{
+  transition: stroke-dashoffset 1s ease, stroke 0.5s ease-in;
+}
+
+.input-values{
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-values input {
+  border: 2px solid hsl(255, 78%, 56%);
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  padding: 4px 6px;
+  font-size: 1.1em;
+  width: 50px;
+  text-align: center;
+  font-weight: 600;
+}

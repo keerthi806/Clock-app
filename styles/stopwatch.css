@@ -1,0 +1,103 @@
+body{
+  font-family: Roboto, Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container{
+  margin-bottom: 25px;
+  font-family: monospace;
+  font-size: 5.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.buttons-container{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.buttons-container button{
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  background-color: hsl(255, 78%, 46%);
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+}
+
+/* .start{
+  background-color: hsl(120, 49%, 57%);
+}
+.stop{
+  background-color: hsl(0, 87%, 57%);
+}
+.reset{
+  background-color: hsl(239, 87%, 58%);
+} 
+.lap{
+  background-color: hsl(34, 35%, 59%);
+} */
+
+.buttons-container button:hover{
+  font-weight: bold;
+  background-color: hsl(255, 78%, 40%);
+}
+/* .start:hover{
+  background-color: hsl(120, 49%, 47%);
+}
+.stop:hover{
+  background-color: hsl(0, 87%, 47%);
+}
+.reset:hover{
+  background-color: hsl(239, 87%, 50%);
+} 
+.lap:hover{
+  background-color: hsl(34, 57%, 60%);
+} */
+
+.laps-container{
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  text-align: center;
+  padding: 5px 5px;
+  color: white;
+  font-size: 1.2em;
+  border: 2px solid transparent;
+  padding: 10px 25px;
+  padding-right: 35px;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in;
+}
+
+.lap-toggled{
+  border-color: hsl(255, 78%, 46%);
+}
+
+.laps,
+.lap-times,
+.overall-time {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
