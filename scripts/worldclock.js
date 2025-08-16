@@ -1,5 +1,17 @@
-const timeApiKey = 'ddd922e63ad846a7928dda74d1c6bc6c';
-const weatherApiKey = 'b923ad656c0ddc07d8ee6b9ea3044d94';
+/*
+API_KEY HANDLING: 
+* In production, API keys should never be hardcoded in client-side code.
+
+* Normally, this value would be loaded securely from a server or environment variable.
+
+* For this demo project, the key is stored in a local .env file (ignored by Git).
+
+* Here we use a placeholder to show where the key would be injected at runtime.
+*/
+
+const timeApiKey = 'TIME_API_KEY ';
+const weatherApiKey = 'WEATHER_API_KEY';
+
 let errorTimeoutId;
 const clockIntervalIds = {};
 let unixEpochId;
