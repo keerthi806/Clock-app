@@ -11,6 +11,7 @@ API_KEY HANDLING:
 
 const timeApiKey = 'TIME_API_KEY ';
 const weatherApiKey = 'WEATHER_API_KEY';
+const geoApiKey = "GEO_API_KEY";
 
 let errorTimeoutId;
 const clockIntervalIds = {};
@@ -61,7 +62,7 @@ document.querySelector('.js-city-name').addEventListener('keydown', e => {
 async function fetchData(cityName) {
   const { lat, lng } = await getCoordinates(cityName);
 
-  const timeResponse = await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=OTDIGV9MBBEG&format=json&by=position&lat=${lat}&lng=${lng}`);
+  const timeResponse = await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${lat}&lng=${lng}`);
 
   const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}`);
 
@@ -82,7 +83,7 @@ async function fetchData(cityName) {
 }
 
 async function getCoordinates(name) {
-  const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=7049a1a7786149fcb7a62e6119af499c`);
+  const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=${geoApiKey}`);
 
   const data = await response.json();
 
